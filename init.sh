@@ -26,7 +26,7 @@ else
 fi
 
 # Step 2.5: Add Current User's SSH Public Key to New User
-CURRENT_USER_SSH_KEY="/home/${SUDO_USER:-$USER}/.ssh/authorized_keys"
+CURRENT_USER_SSH_KEY="~/.ssh/authorized_keys"
 
 if [ -f "$CURRENT_USER_SSH_KEY" ]; then
   mkdir -p "/home/$NEW_USER/.ssh"
